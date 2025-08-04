@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.game-header h1 {
+    color: #ff6b35;
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.score, .lives {
+    font-size: 1.2em;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+#gameCanvas {
+    border: 3px solid #ff6b35;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 50%, #228B22 100%);
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.controls {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #ff6b35;
+    text-align: center;
+}
+
+.game-over h2 {
+    color: #ff6b35;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.game-over button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    margin-top: 15px;
+}
+
+.game-over button:hover {
+    background: #e55a2b;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    #gameCanvas {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .game-header h1 {
+        font-size: 2em;
+    }
+}
